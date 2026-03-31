@@ -1,0 +1,4 @@
+[     491ms] [LOG] JQMIGRATE: Migrate is installed, version 3.3.2 @ http://www.labellotadeoro.es/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2:1
+[     599ms] [WARNING] Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading @ http://maps.google.com/maps/api/js?sensor=true&ver=20120206:336
+[    5604ms] [WARNING] Google Maps JavaScript API warning: NoApiKeys https://developers.google.com/maps/documentation/javascript/error-messages#no-api-keys @ http://maps.google.com/maps-api-v3/api/js/64/6d/intl/es_ALL/util.js:29
+[    5604ms] [WARNING] Google Maps JavaScript API warning: SensorNotRequired https://developers.google.com/maps/documentation/javascript/error-messages#sensor-not-required @ http://maps.google.com/maps-api-v3/api/js/64/6d/intl/es_ALL/util.js:29

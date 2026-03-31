@@ -1,0 +1,287 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e4]:
+      - link "La Bellota de Oro - Inicio" [ref=e5] [cursor=pointer]:
+        - /url: "#hero"
+        - img "La Bellota de Oro" [ref=e6]
+      - list [ref=e7]:
+        - listitem [ref=e8]:
+          - link "Nosotros" [ref=e9] [cursor=pointer]:
+            - /url: "#about"
+        - listitem [ref=e10]:
+          - link "Nuestra carta" [ref=e11] [cursor=pointer]:
+            - /url: "#carta"
+        - listitem [ref=e12]:
+          - link "Celebraciones" [ref=e13] [cursor=pointer]:
+            - /url: "#celebraciones"
+        - listitem [ref=e14]:
+          - link "Contacto" [ref=e15] [cursor=pointer]:
+            - /url: "#info"
+        - listitem [ref=e16]:
+          - link "Reservar mesa" [ref=e17] [cursor=pointer]:
+            - /url: tel:653246613
+  - generic [ref=e18]:
+    - generic [ref=e21]:
+      - paragraph [ref=e22]: Paracuellos de Jarama · Madrid
+      - heading "Donde cada visita se convierte en mesa de amigos" [level=1] [ref=e23]:
+        - text: Donde cada visita
+        - text: se convierte en
+        - emphasis [ref=e24]: mesa de amigos
+      - paragraph [ref=e25]: Tapas, raciones e ibéricos de primera calidad en un ambiente cercano y sin pretensiones. Ven a comer bien, sin complicarte la vida.
+      - generic [ref=e26]:
+        - link "Llamar y reservar" [ref=e27] [cursor=pointer]:
+          - /url: tel:653246613
+          - img [ref=e28]
+          - text: Llamar y reservar
+        - link "Ver la carta" [ref=e30] [cursor=pointer]:
+          - /url: "#carta"
+    - generic [ref=e31] [cursor=pointer]:
+      - generic [ref=e32]: Descubre más
+      - img [ref=e33]
+  - generic [ref=e37]:
+    - generic [ref=e38]:
+      - img [ref=e39]
+      - generic [ref=e42]:
+        - text: Mar–Dom
+        - strong [ref=e43]: 12:00 – 23:30
+        - text: · Vie–Sáb hasta
+        - strong [ref=e44]: 01:00
+    - generic [ref=e45]:
+      - img [ref=e46]
+      - generic [ref=e49]:
+        - text: C.C. Miramadrid,
+        - strong [ref=e50]: Paracuellos de Jarama
+    - generic [ref=e51]:
+      - img [ref=e52]
+      - generic [ref=e54]:
+        - text: Reservas al
+        - strong [ref=e55]: 653 246 613
+  - generic [ref=e58]:
+    - generic [ref=e59]:
+      - img "Interior de La Bellota de Oro" [ref=e60]
+      - generic [ref=e61]:
+        - strong [ref=e62]: "+10"
+        - generic [ref=e63]: años en Paracuellos
+    - generic [ref=e64]:
+      - paragraph [ref=e65]: Quiénes somos
+      - heading "El sabor de siempre, en buena compañía" [level=2] [ref=e66]:
+        - text: El sabor de siempre,
+        - text: en buena compañía
+      - paragraph [ref=e67]: La Bellota de Oro es un restaurante de referencia en Paracuellos de Jarama, conocido por sus productos de primera calidad, su ambiente animado y una carta generosa con raciones elaboradas con los mejores ingredientes.
+      - paragraph [ref=e68]: "Desde tapas y platos de temporada hasta ibéricos seleccionados: aquí comes bien, sin necesidad de grandes ceremonias."
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - img [ref=e72]
+          - generic [ref=e74]:
+            - heading "Producto de calidad" [level=4] [ref=e75]
+            - paragraph [ref=e76]: Ingredientes seleccionados, ibéricos de primera y carta de temporada.
+        - generic [ref=e77]:
+          - img [ref=e79]
+          - generic [ref=e84]:
+            - heading "Ambiente cercano" [level=4] [ref=e85]
+            - paragraph [ref=e86]: Un sitio donde la gente se conoce, repite y trae a los suyos.
+        - generic [ref=e87]:
+          - img [ref=e89]
+          - generic [ref=e92]:
+            - heading "Perfecta para celebrar" [level=4] [ref=e93]
+            - paragraph [ref=e94]: Grupos, cumpleaños, reuniones de empresa o simplemente quedar a comer.
+  - generic [ref=e96]:
+    - generic [ref=e97]:
+      - paragraph [ref=e98]: Lo que nos define
+      - heading "Tres razones para venir" [level=2] [ref=e99]
+      - paragraph [ref=e100]: No hacemos grandes promesas. Solo buena comida, buen trato y un sitio en el que apetece estar.
+    - generic [ref=e101]:
+      - generic [ref=e102]:
+        - img "Tapas y raciones" [ref=e103]
+        - generic [ref=e104]:
+          - paragraph [ref=e105]: "01"
+          - heading "Tapas y raciones" [level=3] [ref=e106]
+          - paragraph [ref=e107]: Una carta amplia de raciones y tapas elaboradas con ingredientes de primera. Para compartir o para comer solo tú.
+          - link "Ver la carta" [ref=e108] [cursor=pointer]:
+            - /url: "#carta"
+            - text: Ver la carta
+            - img [ref=e109]
+      - generic [ref=e111]:
+        - img "Ibéricos y especialidades" [ref=e112]
+        - generic [ref=e113]:
+          - paragraph [ref=e114]: "02"
+          - heading "Ibéricos y especialidades" [level=3] [ref=e115]
+          - paragraph [ref=e116]: Selección de ibéricos de calidad y platos de elaboración propia. Cocina española, sin rodeos.
+          - link "Descubrir" [ref=e117] [cursor=pointer]:
+            - /url: "#carta"
+            - text: Descubrir
+            - img [ref=e118]
+      - generic [ref=e120]:
+        - img "Celebraciones y grupos" [ref=e121]
+        - generic [ref=e122]:
+          - paragraph [ref=e123]: "03"
+          - heading "Celebraciones y grupos" [level=3] [ref=e124]
+          - paragraph [ref=e125]: "Organizamos tu celebración sin complicarte. Cumpleaños, reuniones o quedadas de empresa: aquí cabe todo."
+          - link "Más información" [ref=e126] [cursor=pointer]:
+            - /url: "#celebraciones"
+            - text: Más información
+            - img [ref=e127]
+  - generic [ref=e131]:
+    - generic [ref=e132]:
+      - paragraph [ref=e133]: Nuestra carta
+      - heading "Para comer bien, sin complicarse" [level=2] [ref=e134]:
+        - text: Para comer bien,
+        - text: sin complicarse
+      - paragraph [ref=e135]: Amplia variedad de tapas, raciones y platos elaborados. Vinos, cañas y algo para picar cuando solo quieres eso.
+      - generic [ref=e136]:
+        - generic [ref=e137] [cursor=pointer]:
+          - generic [ref=e138]: Tapas y montaditos
+          - generic [ref=e139]:
+            - generic [ref=e140]: Para empezar
+            - img [ref=e142]
+        - generic [ref=e144] [cursor=pointer]:
+          - generic [ref=e145]: Raciones
+          - generic [ref=e146]:
+            - generic [ref=e147]: Para compartir
+            - img [ref=e149]
+        - generic [ref=e151] [cursor=pointer]:
+          - generic [ref=e152]: Ibéricos
+          - generic [ref=e153]:
+            - generic [ref=e154]: Especialidad
+            - img [ref=e156]
+        - generic [ref=e158] [cursor=pointer]:
+          - generic [ref=e159]: Platos de temporada
+          - generic [ref=e160]:
+            - generic [ref=e161]: Cocina española
+            - img [ref=e163]
+        - generic [ref=e165] [cursor=pointer]:
+          - generic [ref=e166]: Postres
+          - generic [ref=e167]:
+            - generic [ref=e168]: Para acabar bien
+            - img [ref=e170]
+      - link "Ver carta completa" [ref=e173] [cursor=pointer]:
+        - /url: http://www.labellotadeoro.es/nuestra-carta/
+        - text: Ver carta completa
+        - img [ref=e174]
+    - generic [ref=e176]:
+      - img "Raciones de La Bellota de Oro" [ref=e177]
+      - generic [ref=e178]:
+        - paragraph [ref=e179]: Destacado
+        - heading "Raciones para compartir" [level=3] [ref=e180]
+        - paragraph [ref=e181]: Nuestras raciones tienen fama en Paracuellos. Productos frescos, raciones generosas y precios sin sorpresas.
+  - generic [ref=e184]:
+    - generic [ref=e185]:
+      - paragraph [ref=e186]: Celebraciones
+      - heading "Tu próxima celebración, aquí y sin estrés" [level=2] [ref=e187]:
+        - text: Tu próxima celebración,
+        - text: aquí y sin estrés
+      - paragraph [ref=e188]: Cumpleaños, bautizos, comuniones, cenas de empresa o simplemente una comida grande en buena compañía. Nos adaptamos a lo que necesites.
+      - list [ref=e189]:
+        - listitem [ref=e190]: Menús cerrados para grupos desde 10 personas
+        - listitem [ref=e191]: Zona reservada para tu evento
+        - listitem [ref=e192]: Adaptamos la carta a tus preferencias
+        - listitem [ref=e193]: Trato directo sin intermediarios
+        - listitem [ref=e194]: Presupuesto sin compromiso
+      - generic [ref=e195]:
+        - link "Consultar disponibilidad" [ref=e196] [cursor=pointer]:
+          - /url: tel:653246613
+          - img [ref=e197]
+          - text: Consultar disponibilidad
+        - link "Escribirnos" [ref=e199] [cursor=pointer]:
+          - /url: mailto:contacto@labellotadeoro.es
+    - generic [ref=e201]:
+      - img "Celebraciones en La Bellota de Oro" [ref=e203]
+      - img "Ambiente en La Bellota de Oro" [ref=e205]
+  - generic [ref=e208]:
+    - generic [ref=e209]:
+      - heading "¿Tienes mesa reservada?" [level=2] [ref=e210]
+      - paragraph [ref=e211]: Si no, hazlo ahora. Es rápido y te evita esperas innecesarias.
+    - generic [ref=e212]:
+      - link "Reservar por WhatsApp" [ref=e213] [cursor=pointer]:
+        - /url: https://wa.me/34653246613?text=Hola,%20quisiera%20hacer%20una%20reserva
+        - img [ref=e214]
+        - text: Reservar por WhatsApp
+      - link "653 246 613" [ref=e217] [cursor=pointer]:
+        - /url: tel:653246613
+        - img [ref=e218]
+        - text: 653 246 613
+  - generic [ref=e222]:
+    - generic [ref=e223]:
+      - heading "Horario" [level=3] [ref=e224]
+      - list [ref=e225]:
+        - listitem [ref=e226]:
+          - generic [ref=e227]: Lunes
+          - generic [ref=e228]: Cerrado
+        - listitem [ref=e229]:
+          - generic [ref=e230]: Martes
+          - generic [ref=e231]: 12:00 – 23:30
+        - listitem [ref=e232]:
+          - generic [ref=e233]: Miércoles
+          - generic [ref=e234]: 12:00 – 23:30
+        - listitem [ref=e235]:
+          - generic [ref=e236]: Jueves
+          - generic [ref=e237]: 12:00 – 23:30
+        - listitem [ref=e238]:
+          - generic [ref=e239]: Viernes
+          - generic [ref=e240]: 12:00 – 01:00
+        - listitem [ref=e241]:
+          - generic [ref=e242]: Sábado
+          - generic [ref=e243]: 12:00 – 01:00
+        - listitem [ref=e244]:
+          - generic [ref=e245]: Domingo
+          - generic [ref=e246]: 12:00 – 23:30
+    - generic [ref=e247]:
+      - heading "Contacto" [level=3] [ref=e248]
+      - list [ref=e249]:
+        - listitem [ref=e250]:
+          - img [ref=e252]
+          - generic [ref=e255]:
+            - generic [ref=e256]: Dirección
+            - generic [ref=e257]:
+              - text: C.C. Miramadrid, Avda. Juan Pablo II nº 26
+              - text: Paracuellos de Jarama, 28860 Madrid
+        - listitem [ref=e258]:
+          - img [ref=e260]
+          - generic [ref=e262]:
+            - generic [ref=e263]: Teléfono y WhatsApp
+            - link "653 246 613" [ref=e265] [cursor=pointer]:
+              - /url: tel:653246613
+        - listitem [ref=e266]:
+          - img [ref=e268]
+          - generic [ref=e271]:
+            - generic [ref=e272]: Email
+            - link "contacto@labellotadeoro.es" [ref=e274] [cursor=pointer]:
+              - /url: mailto:contacto@labellotadeoro.es
+      - generic [ref=e275]:
+        - link "Facebook" [ref=e276] [cursor=pointer]:
+          - /url: https://www.facebook.com/pages/La-Bellota-de-Oro/475766082521817
+          - img [ref=e277]
+        - link "WhatsApp" [ref=e279] [cursor=pointer]:
+          - /url: https://wa.me/34653246613
+          - img [ref=e280]
+    - generic [ref=e283]:
+      - heading "Cómo llegar" [level=3] [ref=e284]
+      - iframe [ref=e286]
+  - generic [ref=e289]:
+    - generic [ref=e290]:
+      - heading "No te pierdas nuestras novedades" [level=3] [ref=e291]
+      - paragraph [ref=e292]: Promociones, eventos y platos de temporada. Sin spam, sin rodeos.
+    - generic [ref=e293]:
+      - textbox "Tu email" [ref=e294]:
+        - /placeholder: tu@email.com
+      - button "Suscribirme" [ref=e295] [cursor=pointer]
+  - contentinfo [ref=e296]:
+    - generic [ref=e297]:
+      - generic [ref=e298]:
+        - link "La Bellota de Oro" [ref=e299] [cursor=pointer]:
+          - /url: "#hero"
+          - img "La Bellota de Oro" [ref=e300]
+        - list [ref=e301]:
+          - listitem [ref=e302]:
+            - link "Avisos Legales" [ref=e303] [cursor=pointer]:
+              - /url: http://www.labellotadeoro.es/avisos-legales/
+          - listitem [ref=e304]:
+            - link "Política de Cookies" [ref=e305] [cursor=pointer]:
+              - /url: http://www.labellotadeoro.es/politica-de-cookies/
+          - listitem [ref=e306]:
+            - link "Política de Privacidad" [ref=e307] [cursor=pointer]:
+              - /url: http://www.labellotadeoro.es/politica-de-privacidad/
+          - listitem [ref=e308]:
+            - link "contacto@labellotadeoro.es" [ref=e309] [cursor=pointer]:
+              - /url: mailto:contacto@labellotadeoro.es
+      - paragraph [ref=e310]: © 2025 La Bellota de Oro · C.C. Miramadrid, Paracuellos de Jarama · Todos los derechos reservados

@@ -1,0 +1,2086 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Bellota de Oro — Restaurante en Paracuellos de Jarama</title>
+  <meta name="description" content="Restaurante La Bellota de Oro en Paracuellos de Jarama. Tapas, raciones, ibéricos y cocina española de calidad. Reserva tu mesa o celebra con nosotros." />
+  <meta name="keywords" content="restaurante Paracuellos de Jarama, tapas Paracuellos, La Bellota de Oro, raciones Madrid, celebraciones Paracuellos" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="La Bellota de Oro — Restaurante en Paracuellos de Jarama" />
+  <meta property="og:description" content="Tapas, raciones e ibéricos de calidad en Paracuellos de Jarama. Ven a conocernos." />
+  <meta property="og:type" content="restaurant" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    :root {
+      --cream:     #FAF7F2;
+      --cream-mid: #F0EBE1;
+      --brown-deep:#2C1A0E;
+      --brown-mid: #5C3D1E;
+      --brown-soft:#8B6344;
+      --gold:      #C9A227;
+      --gold-light:#E8C84A;
+      --white:     #FFFFFF;
+      --text:      #3A2A1A;
+      --text-light:#7A6555;
+      --border:    #DDD4C4;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans:  'Inter', system-ui, sans-serif;
+      --radius:     4px;
+      --shadow-sm:  0 2px 12px rgba(44,26,14,0.08);
+      --shadow-md:  0 6px 30px rgba(44,26,14,0.14);
+      --shadow-lg:  0 20px 60px rgba(44,26,14,0.2);
+      --transition: 0.3s ease;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* ===== TYPOGRAPHY ===== */
+    .serif { font-family: var(--font-serif); }
+
+    h1, h2, h3 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--brown-deep);
+    }
+
+    .section-label {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      max-width: 560px;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      width: 90%;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    /* ===== HEADER / NAV ===== */
+    #header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 20px 0;
+      transition: background var(--transition), padding var(--transition), box-shadow var(--transition);
+    }
+
+    #header.scrolled {
+      background: rgba(250, 247, 242, 0.97);
+      backdrop-filter: blur(8px);
+      padding: 12px 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .nav-logo img {
+      height: 56px;
+      width: auto;
+      transition: height var(--transition);
+    }
+
+    #header.scrolled .nav-logo img {
+      height: 44px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      transition: color var(--transition);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width var(--transition);
+    }
+
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a:hover { color: var(--gold-light); }
+
+    #header.scrolled .nav-links a { color: var(--text); }
+    #header.scrolled .nav-links a:hover { color: var(--gold); }
+
+    .nav-cta {
+      font-size: 0.82rem !important;
+      font-weight: 600 !important;
+      padding: 9px 20px;
+      background: var(--gold) !important;
+      color: var(--brown-deep) !important;
+      border-radius: 2px;
+      transition: background var(--transition), transform var(--transition) !important;
+    }
+
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
+
+    /* Mobile menu toggle */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+      position: relative;
+      z-index: 1100;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: background var(--transition), transform var(--transition);
+      border-radius: 2px;
+    }
+
+    #header.scrolled .nav-toggle span { background: var(--text); }
+
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ===== HERO ===== */
+    #hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        135deg,
+        rgba(20, 10, 4, 0.72) 0%,
+        rgba(44, 26, 14, 0.55) 50%,
+        rgba(20, 10, 4, 0.65) 100%
+      );
+    }
+
+    /* Garantiza que la zona del nav siempre sea legible */
+    .hero-overlay::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 160px;
+      background: linear-gradient(to bottom, rgba(10, 5, 2, 0.65) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: var(--white);
+      padding-top: 80px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-tag::before {
+      content: '';
+      display: block;
+      width: 36px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-title {
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.08;
+      margin-bottom: 1.4rem;
+      max-width: 680px;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.82);
+      max-width: 500px;
+      margin-bottom: 2.4rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      border-radius: 2px;
+      border: none;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--brown-deep);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201,162,39,0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.5);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--white);
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Botones hero — pill redondeado y premium */
+    .hero-actions .btn {
+      border-radius: 50px;
+      padding: 14px 30px;
+      font-size: 0.85rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .hero-actions .btn-primary {
+      background: var(--gold);
+      color: var(--brown-deep);
+      box-shadow: 0 4px 20px rgba(201,162,39,0.35);
+    }
+
+    .hero-actions .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 32px rgba(201,162,39,0.5);
+    }
+
+    .hero-actions .btn-outline {
+      background: rgba(255,255,255,0.08);
+      border: 1.5px solid rgba(255,255,255,0.55);
+      color: var(--white);
+    }
+
+    .hero-actions .btn-outline:hover {
+      background: rgba(255,255,255,0.18);
+      border-color: var(--white);
+      transform: translateY(-3px);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      animation: bounce 2.5s infinite;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .hero-scroll svg { opacity: 0.5; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* ===== INTRO BAR ===== */
+    #intro-bar {
+      background: var(--brown-deep);
+      padding: 18px 0;
+    }
+
+    .intro-bar-inner {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .intro-bar-item {
+      color: rgba(255,255,255,0.75);
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .intro-bar-item svg { opacity: 0.6; flex-shrink: 0; }
+    .intro-bar-item strong { color: var(--gold-light); font-weight: 500; }
+
+    /* ===== ABOUT ===== */
+    #about {
+      background: var(--cream);
+    }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-image-wrap {
+      position: relative;
+    }
+
+    .about-image-main {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about-image-badge {
+      position: absolute;
+      bottom: -24px;
+      right: -24px;
+      width: 130px;
+      height: 130px;
+      background: var(--brown-deep);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: var(--white);
+      padding: 16px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-image-badge strong {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+
+    .about-image-badge span {
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin-top: 4px;
+    }
+
+    .about-text { padding-left: 1rem; }
+
+    .about-text .section-subtitle {
+      margin-bottom: 1.8rem;
+    }
+
+    .about-features {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+
+    .about-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .about-feature-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--cream-mid);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--gold);
+    }
+
+    .about-feature-text h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--brown-deep);
+      margin-bottom: 2px;
+      font-family: var(--font-sans);
+    }
+
+    .about-feature-text p {
+      font-size: 0.875rem;
+      color: var(--text-light);
+    }
+
+    /* ===== CARTA MENU ===== */
+    #carta {
+      background: var(--cream);
+      padding-top: 70px;
+      padding-bottom: 80px;
+    }
+
+    .carta-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .carta-header .section-subtitle { margin: 0 auto; }
+
+    .carta-domicilio-banner {
+      background: var(--brown-deep);
+      color: rgba(255,255,255,0.8);
+      text-align: center;
+      padding: 11px 20px;
+      font-size: 0.82rem;
+      letter-spacing: 0.03em;
+      border-radius: var(--radius);
+      margin-bottom: 2rem;
+    }
+
+    .carta-domicilio-banner strong { color: var(--gold-light); font-weight: 600; }
+
+    /* Sticky tabs */
+    .carta-tabs {
+      position: sticky;
+      top: 68px;
+      z-index: 99;
+      background: var(--cream);
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 3rem;
+    }
+
+    .carta-tabs-inner {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 2px;
+    }
+
+    .carta-tabs-inner::-webkit-scrollbar { display: none; }
+
+    .carta-tab {
+      flex-shrink: 0;
+      padding: 7px 15px;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--text-light);
+      border: 1.5px solid var(--border);
+      border-radius: 100px;
+      cursor: pointer;
+      background: transparent;
+      transition: all var(--transition);
+      white-space: nowrap;
+      font-family: var(--font-sans);
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .carta-tab:hover,
+    .carta-tab.active {
+      background: var(--brown-deep);
+      color: var(--white);
+      border-color: var(--brown-deep);
+    }
+
+    /* Menu sections */
+    .carta-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .carta-menu-section {
+      scroll-margin-top: 140px;
+    }
+
+    .carta-section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 2px solid var(--brown-deep);
+    }
+
+    .carta-section-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      color: var(--brown-deep);
+      font-weight: 600;
+    }
+
+    .carta-section-note {
+      font-size: 0.72rem;
+      color: var(--text-light);
+      font-style: italic;
+    }
+
+    .carta-items { display: flex; flex-direction: column; }
+
+    .carta-item {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .carta-item:last-child { border-bottom: none; }
+
+    .carta-item-left { flex: 1; min-width: 0; }
+
+    .carta-item-name {
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    .carta-item-desc {
+      font-size: 0.77rem;
+      color: var(--text-light);
+      line-height: 1.4;
+      margin-top: 2px;
+    }
+
+    .carta-item-price {
+      font-family: var(--font-serif);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--brown-deep);
+      white-space: nowrap;
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    .carta-item-price small {
+      display: block;
+      font-size: 0.68rem;
+      font-weight: 400;
+      color: var(--text-light);
+      font-family: var(--font-sans);
+    }
+
+    .carta-encargo {
+      background: var(--cream-mid);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.9rem 1.1rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.8rem;
+      color: var(--text-light);
+      margin-top: 0.5rem;
+      line-height: 1.5;
+    }
+
+    .carta-encargo svg { flex-shrink: 0; margin-top: 1px; color: var(--gold); }
+
+    /* ===== CELEBRACIONES ===== */
+    #celebraciones {
+      background: var(--cream);
+    }
+
+    .celebraciones-inner {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .celebraciones-text { order: 1; }
+    .celebraciones-visual { order: 2; }
+
+    .celebraciones-list {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .celebraciones-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    .celebraciones-item::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .celebraciones-cta-group {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-dark {
+      background: var(--brown-deep);
+      color: var(--white);
+    }
+
+    .btn-dark:hover {
+      background: var(--brown-mid);
+      transform: translateY(-2px);
+    }
+
+    .celebraciones-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .celebraciones-img {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .celebraciones-img img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .celebraciones-img:hover img { transform: scale(1.04); }
+
+    .celebraciones-img:first-child { margin-top: 2.5rem; }
+
+    /* ===== RESERVA CTA ===== */
+    #reserva-cta {
+      background: linear-gradient(135deg, var(--brown-deep) 0%, var(--brown-mid) 100%);
+      padding: 70px 0;
+    }
+
+    .reserva-cta-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .reserva-cta-text h2 {
+      color: var(--white);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .reserva-cta-text p {
+      color: rgba(255,255,255,0.65);
+      font-size: 0.95rem;
+    }
+
+    .reserva-cta-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: var(--white);
+    }
+
+    .btn-whatsapp:hover {
+      background: #20bc5a;
+      transform: translateY(-2px);
+    }
+
+    .btn-call {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255,255,255,0.4);
+    }
+
+    .btn-call:hover {
+      border-color: var(--white);
+      background: rgba(255,255,255,0.08);
+    }
+
+    /* ===== INFO / HORARIO / CONTACTO ===== */
+    #info {
+      background: var(--cream-mid);
+    }
+
+    .info-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+    }
+
+    .info-block h3 {
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+    }
+
+    .hours-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.875rem;
+    }
+
+    .hours-row:last-child { border-bottom: none; }
+
+    .hours-day { font-weight: 500; color: var(--text); }
+
+    .hours-time { color: var(--text-light); }
+
+    .hours-closed { color: #C0392B; font-size: 0.8rem; font-weight: 500; }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 12px;
+      font-size: 0.875rem;
+    }
+
+    .contact-icon {
+      width: 34px;
+      height: 34px;
+      background: var(--brown-deep);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--gold);
+    }
+
+    .contact-item-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .contact-item-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-light);
+    }
+
+    .contact-item-value {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .contact-item-value a {
+      color: var(--text);
+      transition: color var(--transition);
+    }
+
+    .contact-item-value a:hover { color: var(--gold); }
+
+    .social-row {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .social-btn {
+      width: 38px;
+      height: 38px;
+      background: var(--brown-deep);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      transition: background var(--transition), transform var(--transition);
+    }
+
+    .social-btn:hover {
+      background: var(--gold);
+      color: var(--brown-deep);
+      transform: translateY(-2px);
+    }
+
+    /* Map */
+    .map-embed {
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .map-embed iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ===== NEWSLETTER ===== */
+    #newsletter {
+      background: var(--brown-deep);
+      padding: 60px 0;
+    }
+
+    .newsletter-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .newsletter-text h3 {
+      color: var(--white);
+      font-size: 1.4rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .newsletter-text p {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.85rem;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0;
+      flex: 1;
+      max-width: 440px;
+    }
+
+    .newsletter-input {
+      flex: 1;
+      padding: 12px 16px;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-right: none;
+      color: var(--white);
+      border-radius: 2px 0 0 2px;
+      outline: none;
+      transition: border-color var(--transition), background var(--transition);
+    }
+
+    .newsletter-input::placeholder { color: rgba(255,255,255,0.4); }
+
+    .newsletter-input:focus {
+      background: rgba(255,255,255,0.15);
+      border-color: rgba(255,255,255,0.3);
+    }
+
+    .newsletter-submit {
+      padding: 12px 22px;
+      background: var(--gold);
+      color: var(--brown-deep);
+      font-family: var(--font-sans);
+      font-size: 0.82rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 0 2px 2px 0;
+      cursor: pointer;
+      transition: background var(--transition);
+      white-space: nowrap;
+    }
+
+    .newsletter-submit:hover { background: var(--gold-light); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #1A0D06;
+      padding: 40px 0 24px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 20px;
+    }
+
+    .footer-logo img {
+      height: 52px;
+      width: auto;
+      opacity: 0.85;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      transition: color var(--transition);
+    }
+
+    .footer-links a:hover { color: rgba(255,255,255,0.7); }
+
+    .footer-copy {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+      text-align: center;
+    }
+
+    /* ===== FLOATING ACTIONS (mobile) ===== */
+    .float-actions {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      z-index: 900;
+      padding: 0 16px;
+      gap: 10px;
+    }
+
+    .float-actions .btn {
+      flex: 1;
+      justify-content: center;
+      box-shadow: var(--shadow-md);
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-up-delay-1 { transition-delay: 0.1s; }
+    .fade-up-delay-2 { transition-delay: 0.2s; }
+    .fade-up-delay-3 { transition-delay: 0.3s; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .about-text { padding-left: 0; }
+      .about-image-badge { width: 100px; height: 100px; right: -10px; bottom: -10px; }
+      .celebraciones-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .celebraciones-visual { order: -1; }
+      .celebraciones-images { grid-template-columns: 1fr 1fr; max-width: 440px; }
+      .celebraciones-img:first-child { margin-top: 0; }
+      .info-inner { grid-template-columns: 1fr 1fr; }
+      .info-inner > *:last-child { grid-column: 1 / -1; }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 56px 0; }
+
+      /* Nav */
+      .nav-links { display: none; }
+      .nav-toggle { display: flex; }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        inset: 0;
+        background: var(--brown-deep);
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        z-index: 1050;
+      }
+
+      .nav-links.open a {
+        font-size: 1.25rem;
+        color: var(--white) !important;
+      }
+
+      .nav-links.open .nav-cta {
+        background: var(--gold) !important;
+        color: var(--brown-deep) !important;
+        padding: 14px 32px !important;
+        font-size: 1rem !important;
+      }
+
+      /* Carta */
+      .carta-tabs { top: 56px; }
+      .carta-menu-section { scroll-margin-top: 120px; }
+      .carta-section-title { font-size: 1.05rem; }
+      .carta-item { padding: 0.85rem 0; }
+      .carta-item-name { font-size: 0.88rem; }
+      .carta-item-price { font-size: 0.88rem; }
+
+      /* Info */
+      .info-inner { grid-template-columns: 1fr; }
+
+      /* CTA */
+      .reserva-cta-inner { flex-direction: column; text-align: center; }
+      .reserva-cta-actions { justify-content: center; }
+
+      /* Newsletter */
+      .newsletter-inner { flex-direction: column; text-align: center; }
+      .newsletter-form { max-width: 100%; width: 100%; }
+
+      /* Footer */
+      .footer-inner { flex-direction: column; align-items: center; text-align: center; }
+      .footer-links { justify-content: center; }
+
+      /* Float actions */
+      .float-actions { display: flex; }
+    }
+
+    @media (max-width: 480px) {
+      .section { padding: 48px 0; }
+      .hero-title { font-size: 2.2rem; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; justify-content: center; }
+      .intro-bar-inner { flex-direction: column; gap: 0.75rem; }
+      .about-image-badge { display: none; }
+      .celebraciones-cta-group { flex-direction: column; }
+      .celebraciones-cta-group .btn { width: 100%; justify-content: center; }
+      .carta-tab { padding: 6px 12px; font-size: 0.72rem; }
+      .section-title { font-size: 1.6rem; }
+      .reserva-cta-actions { flex-direction: column; width: 100%; }
+      .reserva-cta-actions .btn { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header">
+    <div class="container">
+      <nav class="nav-inner">
+        <a href="#hero" class="nav-logo" aria-label="La Bellota de Oro - Inicio">
+          <img src="la-bellota-de-oro_logo_contor-300x212.png" alt="La Bellota de Oro" />
+        </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">Nosotros</a></li>
+          <li><a href="#carta">Nuestra carta</a></li>
+          <li><a href="#celebraciones">Celebraciones</a></li>
+          <li><a href="#info">Contacto</a></li>
+          <li><a href="tel:653246613" class="nav-cta">Reservar mesa</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Menú" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <video
+      class="hero-video"
+      src="animacionhero2.mp4"
+      autoplay
+      muted
+      playsinline
+      id="hero-video"
+    ></video>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <p class="hero-tag">Paracuellos de Jarama · Madrid</p>
+      <h1 class="hero-title">
+        Donde cada visita<br/>se convierte en <em>mesa de amigos</em>
+      </h1>
+      <p class="hero-desc">
+        Tapas, raciones e ibéricos de primera calidad en un ambiente cercano y sin pretensiones. Ven a comer bien, sin complicarte la vida.
+      </p>
+      <div class="hero-actions">
+        <a href="tel:653246613" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.03 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Llamar y reservar
+        </a>
+        <a href="#carta" class="btn btn-outline">Ver la carta</a>
+        <a href="https://www.just-eat.es/restaurants-labellotadeoroparacuellos/menu#pre-order" target="_blank" rel="noopener" class="btn btn-outline" style="opacity:0.75; font-size:0.8rem;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1.5 6M17 13l1.5 6M9 19a1 1 0 100 2 1 1 0 000-2zm8 0a1 1 0 100 2 1 1 0 000-2z"/></svg>
+          Pedir a domicilio
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+      <span>Descubre más</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </div>
+  </section>
+
+  <!-- ===== INTRO BAR ===== -->
+  <div id="intro-bar">
+    <div class="container">
+      <div class="intro-bar-inner">
+        <div class="intro-bar-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Mar–Dom <strong>12:00 – 23:30</strong> &nbsp;·&nbsp; Vie–Sáb hasta <strong>01:00</strong></span>
+        </div>
+        <div class="intro-bar-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>C.C. Miramadrid, <strong>Paracuellos de Jarama</strong></span>
+        </div>
+        <div class="intro-bar-item">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8"/></svg>
+          <span>Reservas al <strong>653 246 613</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-image-wrap fade-up">
+          <img
+            src="http://www.labellotadeoro.es/wp-content/uploads/DSC0242-e1399734386220.jpg"
+            alt="Interior de La Bellota de Oro"
+            class="about-image-main"
+          />
+          <div class="about-image-badge">
+            <strong>+10</strong>
+            <span>años en Paracuellos</span>
+          </div>
+        </div>
+        <div class="about-text fade-up fade-up-delay-1">
+          <p class="section-label">Quiénes somos</p>
+          <h2 class="section-title">El sabor de siempre,<br/>en buena compañía</h2>
+          <p class="section-subtitle">
+            La Bellota de Oro es un restaurante de referencia en Paracuellos de Jarama, conocido por sus productos de primera calidad, su ambiente animado y una carta generosa con raciones elaboradas con los mejores ingredientes.
+          </p>
+          <p class="section-subtitle" style="margin-top:1rem;">
+            Desde tapas y platos de temporada hasta ibéricos seleccionados: aquí comes bien, sin necesidad de grandes ceremonias.
+          </p>
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+              </div>
+              <div class="about-feature-text">
+                <h4>Producto de calidad</h4>
+                <p>Ingredientes seleccionados, ibéricos de primera y carta de temporada.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              </div>
+              <div class="about-feature-text">
+                <h4>Ambiente cercano</h4>
+                <p>Un sitio donde la gente se conoce, repite y trae a los suyos.</p>
+              </div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+              </div>
+              <div class="about-feature-text">
+                <h4>Perfecta para celebrar</h4>
+                <p>Grupos, cumpleaños, reuniones de empresa o simplemente quedar a comer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CARTA ===== -->
+  <section id="carta">
+    <div class="container" style="padding-top:70px;">
+      <div class="carta-header fade-up">
+        <p class="section-label">Nuestra carta</p>
+        <h2 class="section-title">Todo lo que sirven,<br/>a precio justo</h2>
+      </div>
+      <div class="carta-domicilio-banner">
+        <strong>¡También servicio a domicilio!</strong> — Llámanos al 653 246 613
+      </div>
+    </div>
+
+    <!-- Tabs sticky -->
+    <div class="carta-tabs">
+      <div class="container">
+        <div class="carta-tabs-inner" role="tablist">
+          <button class="carta-tab active" data-target="embutidos">Embutidos</button>
+          <button class="carta-tab" data-target="compartir">Para compartir</button>
+          <button class="carta-tab" data-target="ensaladas">Ensaladas</button>
+          <button class="carta-tab" data-target="carnes">Carnes</button>
+          <button class="carta-tab" data-target="mar">Del mar</button>
+          <button class="carta-tab" data-target="huevos">Huevos</button>
+          <button class="carta-tab" data-target="sandwiches">Sándwiches</button>
+          <button class="carta-tab" data-target="infantil">Infantil</button>
+          <button class="carta-tab" data-target="postres">Postres</button>
+          <button class="carta-tab" data-target="arroces">Arroces</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="carta-menu">
+
+        <!-- EMBUTIDOS -->
+        <div class="carta-menu-section fade-up" id="embutidos">
+          <div class="carta-section-header">
+            <h3 class="carta-section-title">Los embutidos</h3>
+            <span class="carta-section-note">Todos acompañados de pan tumaca</span>
+          </div>
+          <div class="carta-items">
+            <div class="carta-item">
+              <div class="carta-item-left">
+                <p class="carta-item-name">Jamón ibérico de Bellota</p>
+              </div>
+              <div class="carta-item-price">25,80€<small>Media 18,30€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left">
+                <p class="carta-item-name">Tabla Ibérica La Bellota de Oro</p>
+                <p class="carta-item-desc">Jamón Ibérico de Bellota, chorizo, Salchichón y queso de Oveja</p>
+              </div>
+              <div class="carta-item-price">25,80€<small>Media 18,30€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left">
+                <p class="carta-item-name">Queso de oveja curado</p>
+              </div>
+              <div class="carta-item-price">11,30€<small>Media 18,20€</small></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PARA COMPARTIR -->
+        <div class="carta-menu-section fade-up" id="compartir">
+          <div class="carta-section-header">
+            <h3 class="carta-section-title">Para compartir</h3>
+          </div>
+          <div class="carta-items">
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Alcachofas con crujiente de Jamón Ibérico</p></div>
+              <div class="carta-item-price">18,20€<small>Media 10,40€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Parrillada de Verduras</p></div>
+              <div class="carta-item-price">17,40€<small>Media 10,40€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Lacón a la gallega con Cachelos</p></div>
+              <div class="carta-item-price">16,70€<small>Media 10,40€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Torreznos de Soria con Patatas revolconas</p></div>
+              <div class="carta-item-price">13,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Lágrimas de pollo con salsa de mostaza y miel</p></div>
+              <div class="carta-item-price">16,70€<small>Media 10,40€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Setas de temporada rebozadas con alioli</p></div>
+              <div class="carta-item-price">15,60€<small>Media 9,90€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Alitas de pollo con salsa barbacoa al estilo americano</p></div>
+              <div class="carta-item-price">16,70€<small>Media 10,40€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Oreja adobada a la plancha con Salsa brava</p></div>
+              <div class="carta-item-price">17,20€<small>Media 11,20€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left">
+                <p class="carta-item-name">Croquetas caseras</p>
+                <p class="carta-item-desc">De Jamón Ibérico, Chipirones, Setas y Boletus</p>
+              </div>
+              <div class="carta-item-price">14,80€<small>Media 9,90€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Patatas bravas, Alioli o Mixtas</p></div>
+              <div class="carta-item-price">12,10€<small>Media 8,40€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Tequeños de Queso fresco con Melaza de caña</p></div>
+              <div class="carta-item-price">13,70€<small>5 und 8,40€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Espárragos trigueros a la parrilla con jamón ibérico</p></div>
+              <div class="carta-item-price">16,40€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Berenjenas rebozadas con miel</p></div>
+              <div class="carta-item-price">15,20€<small>Media 10,10€</small></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ENSALADAS -->
+        <div class="carta-menu-section fade-up" id="ensaladas">
+          <div class="carta-section-header">
+            <h3 class="carta-section-title">Ensaladas</h3>
+          </div>
+          <div class="carta-items">
+            <div class="carta-item">
+              <div class="carta-item-left">
+                <p class="carta-item-name">Burrata fresca con tartar de Tomate al Estragón al toque de Pesto</p>
+              </div>
+              <div class="carta-item-price">14,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Ensalada César</p></div>
+              <div class="carta-item-price">15,10€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left">
+                <p class="carta-item-name">Tomate Raff con Ventresca, Pimientos asados y Cebolleta</p>
+              </div>
+              <div class="carta-item-price">17,10€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left">
+                <p class="carta-item-name">Ensalada La Bellota de Oro</p>
+                <p class="carta-item-desc">Bonito, Lechuga, Tomate, Huevo Cocido, Pimientos Asados, Espárragos y Cebolleta</p>
+              </div>
+              <div class="carta-item-price">14,20€</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRINCHADOS DE CARNE -->
+        <div class="carta-menu-section fade-up" id="carnes">
+          <div class="carta-section-header">
+            <h3 class="carta-section-title">Los trinchados de carne</h3>
+            <span class="carta-section-note">Con guarnición: Patatas, Pimientos de Padrón y Chimichurri casero</span>
+          </div>
+          <div class="carta-items">
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Chorizo Criollo</p></div>
+              <div class="carta-item-price">14,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Morcilla de Burgos</p></div>
+              <div class="carta-item-price">15,10€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Trinchado de Solomillo de Ternera</p></div>
+              <div class="carta-item-price">24,30€<small>al P.X. 25,30€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left">
+                <p class="carta-item-name">El Trinchado de Oro</p>
+                <p class="carta-item-desc">Para 2 personas — Morcilla, Chorizo, Entrecot y Secreto</p>
+              </div>
+              <div class="carta-item-price">40,60€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Secreto Ibérico</p><p class="carta-item-desc">300 gr. aprox.</p></div>
+              <div class="carta-item-price">25,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Entrecot de Vaca madurada</p><p class="carta-item-desc">350 gr. aprox.</p></div>
+              <div class="carta-item-price">25,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Chuletón de Vaca madurada</p><p class="carta-item-desc">1 kilo s/h</p></div>
+              <div class="carta-item-price">56,20€</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DEL MAR -->
+        <div class="carta-menu-section fade-up" id="mar">
+          <div class="carta-section-header">
+            <h3 class="carta-section-title">Un salto al mar</h3>
+          </div>
+          <div class="carta-items">
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Tortitas de Camarón con Alioli</p></div>
+              <div class="carta-item-price">14,20€<small>Media 9,40€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Calamares a la andaluza</p></div>
+              <div class="carta-item-price">17,00€<small>Media 10,90€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Sepia a la plancha al toque de Ajo con Perejil</p></div>
+              <div class="carta-item-price">24,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Boquerones fritos</p></div>
+              <div class="carta-item-price">15,70€<small>Media 9,90€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left">
+                <p class="carta-item-name">Fritura de pescado variada</p>
+                <p class="carta-item-desc">Tortitas de Camarón, Calamares, Boquerones, Chopitos y Cazón</p>
+              </div>
+              <div class="carta-item-price">22,70€<small>Media 14,10€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Chopitos a la andaluza</p></div>
+              <div class="carta-item-price">16,10€<small>Media 10,90€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Cazón en adobo</p></div>
+              <div class="carta-item-price">17,20€<small>Media 10,90€</small></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- HUEVOS -->
+        <div class="carta-menu-section fade-up" id="huevos">
+          <div class="carta-section-header">
+            <h3 class="carta-section-title">Huevos revueltos, rotos y tortilla</h3>
+          </div>
+          <div class="carta-items">
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Revueltos de Gulas con Gambas y Patatas paja</p></div>
+              <div class="carta-item-price">15,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Huevos Rotos con Gambas y Ajetes</p></div>
+              <div class="carta-item-price">16,70€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Revuelto de Morcilla con Pasas y Patatas paja</p></div>
+              <div class="carta-item-price">14,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Revuelto de Setas con Jamón y Patatas paja</p></div>
+              <div class="carta-item-price">17,00€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left">
+                <p class="carta-item-name">Tortilla de Patata rellena de Mozzarella y Jamón Ibérico</p>
+              </div>
+              <div class="carta-item-price">10,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Tortilla de Patata con Cebolla</p></div>
+              <div class="carta-item-price">9,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Huevos rotos con Jamón Ibérico</p></div>
+              <div class="carta-item-price">17,70€<small>Media 10,90€</small></div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Huevos rotos con Chistorra</p></div>
+              <div class="carta-item-price">15,20€<small>Media 9,40€</small></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SÁNDWICHES Y HAMBURGUESAS -->
+        <div class="carta-menu-section fade-up" id="sandwiches">
+          <div class="carta-section-header">
+            <h3 class="carta-section-title">Sándwiches y hamburguesas</h3>
+            <span class="carta-section-note">Incluyen patatas fritas</span>
+          </div>
+          <div class="carta-items">
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Sandwich Club House Bellota de Oro</p></div>
+              <div class="carta-item-price">13,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Vegetal con atún</p></div>
+              <div class="carta-item-price">9,30€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Mixto (Jamón y Queso)</p></div>
+              <div class="carta-item-price">5,40€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Mixto con Huevo</p></div>
+              <div class="carta-item-price">5,90€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left">
+                <p class="carta-item-name">Hamburguesa La Bellota de Oro</p>
+                <p class="carta-item-desc">Carne de Angus, Lechuga, Tomate, Bacón, Cebolla Crujiente y Queso Cheddar o Cabra</p>
+              </div>
+              <div class="carta-item-price">14,80€</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MENÚ INFANTIL -->
+        <div class="carta-menu-section fade-up" id="infantil">
+          <div class="carta-section-header">
+            <h3 class="carta-section-title">Menú infantil</h3>
+            <span class="carta-section-note">Incluye patatas fritas</span>
+          </div>
+          <div class="carta-items">
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Mix de lágrimas de Pollo con 2 Croquetas de Jamón</p></div>
+              <div class="carta-item-price">11,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Sandwich mixto con 2 Tequeños de Queso</p></div>
+              <div class="carta-item-price">8,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Hamburguesa Junior con Bacón y Queso</p></div>
+              <div class="carta-item-price">10,80€</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- POSTRES -->
+        <div class="carta-menu-section fade-up" id="postres">
+          <div class="carta-section-header">
+            <h3 class="carta-section-title">Postres</h3>
+          </div>
+          <div class="carta-items">
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Helados variados</p></div>
+              <div class="carta-item-price" style="font-style:italic;font-family:var(--font-sans);font-size:0.8rem;color:var(--text-light);">Consultar</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Sorbete de Mojito</p><p class="carta-item-desc">Con o sin alcohol</p></div>
+              <div class="carta-item-price">5,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Coulant de Chocolate caliente con Helado de Vainilla</p></div>
+              <div class="carta-item-price">6,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Tarta de Zanahoria</p></div>
+              <div class="carta-item-price">6,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Tarta de 3 Leches</p></div>
+              <div class="carta-item-price">6,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Brownie con Helado de Vainilla</p></div>
+              <div class="carta-item-price">6,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Vaso de Tarta de Queso de la Casa</p></div>
+              <div class="carta-item-price">6,20€</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Tarta de Galletas Oreo</p></div>
+              <div class="carta-item-price">6,20€</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ARROCES Y ESPECIALES -->
+        <div class="carta-menu-section fade-up" id="arroces">
+          <div class="carta-section-header">
+            <h3 class="carta-section-title">Arroces, paellas y asados</h3>
+          </div>
+          <div class="carta-items">
+            <div class="carta-item">
+              <div class="carta-item-left">
+                <p class="carta-item-name">Arroces</p>
+                <p class="carta-item-desc">Señoret · Negro con Chipirones</p>
+              </div>
+              <div class="carta-item-price" style="font-style:italic;font-family:var(--font-sans);font-size:0.8rem;color:var(--text-light);">Consultar</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left">
+                <p class="carta-item-name">Paellas</p>
+                <p class="carta-item-desc">Mixta Valenciana · Verduras y Pollo</p>
+              </div>
+              <div class="carta-item-price" style="font-style:italic;font-family:var(--font-sans);font-size:0.8rem;color:var(--text-light);">Consultar</div>
+            </div>
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name">Cordero o Cochinillo asados</p></div>
+              <div class="carta-item-price" style="font-style:italic;font-family:var(--font-sans);font-size:0.8rem;color:var(--text-light);">Consultar</div>
+            </div>
+          </div>
+          <div class="carta-encargo">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Arroces, paellas y asados solo por encargo y reserva previa. Mínimo 2 personas. Llámanos al <strong style="color:var(--text);">653 246 613</strong>.
+          </div>
+        </div>
+
+        <!-- Pan -->
+        <div class="carta-menu-section fade-up" style="border-top:1px solid var(--border); padding-top:1.5rem;">
+          <div class="carta-items">
+            <div class="carta-item">
+              <div class="carta-item-left"><p class="carta-item-name" style="color:var(--text-light);">Servicio de pan</p></div>
+              <div class="carta-item-price" style="color:var(--text-light);">0,75€<small>por persona</small></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CELEBRACIONES ===== -->
+  <section id="celebraciones" class="section">
+    <div class="container">
+      <div class="celebraciones-inner">
+        <div class="celebraciones-text fade-up">
+          <p class="section-label">Celebraciones</p>
+          <h2 class="section-title">Tu próxima celebración,<br/>aquí y sin estrés</h2>
+          <p class="section-subtitle">
+            Cumpleaños, bautizos, comuniones, cenas de empresa o simplemente una comida grande en buena compañía. Nos adaptamos a lo que necesites.
+          </p>
+          <ul class="celebraciones-list">
+            <li class="celebraciones-item">Menús cerrados para grupos desde 10 personas</li>
+            <li class="celebraciones-item">Zona reservada para tu evento</li>
+            <li class="celebraciones-item">Adaptamos la carta a tus preferencias</li>
+            <li class="celebraciones-item">Trato directo sin intermediarios</li>
+            <li class="celebraciones-item">Presupuesto sin compromiso</li>
+          </ul>
+          <div class="celebraciones-cta-group">
+            <a href="tel:653246613" class="btn btn-primary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.03 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              Consultar disponibilidad
+            </a>
+            <a href="mailto:contacto@labellotadeoro.es" class="btn btn-dark">Escribirnos</a>
+          </div>
+        </div>
+        <div class="celebraciones-visual fade-up fade-up-delay-1">
+          <div class="celebraciones-images">
+            <div class="celebraciones-img">
+              <img
+                src="http://www.labellotadeoro.es/wp-content/uploads/DSC0316-2000x925.jpg"
+                alt="Celebraciones en La Bellota de Oro"
+              />
+            </div>
+            <div class="celebraciones-img">
+              <img
+                src="http://www.labellotadeoro.es/wp-content/uploads/DSC0312-2000x925.jpg"
+                alt="Ambiente en La Bellota de Oro"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESERVA CTA ===== -->
+  <section id="reserva-cta">
+    <div class="container">
+      <div class="reserva-cta-inner">
+        <div class="reserva-cta-text">
+          <h2>¿Tienes mesa reservada?</h2>
+          <p>Si no, hazlo ahora. Es rápido y te evita esperas innecesarias.</p>
+        </div>
+        <div class="reserva-cta-actions">
+          <a href="https://wa.me/34653246613?text=Hola,%20quisiera%20hacer%20una%20reserva" target="_blank" class="btn btn-whatsapp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.118 1.524 5.854L.057 23.03a1 1 0 001.24 1.24l5.176-1.467A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.955 0-3.793-.538-5.371-1.476l-.385-.228-3.994 1.132 1.133-3.994-.228-.385A9.958 9.958 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Reservar por WhatsApp
+          </a>
+          <a href="tel:653246613" class="btn btn-call">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.03 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            653 246 613
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INFO / HORARIO / CONTACTO ===== -->
+  <section id="info" class="section">
+    <div class="container">
+      <div class="info-inner">
+        <!-- Horario -->
+        <div class="fade-up">
+          <h3>Horario</h3>
+          <ul class="hours-list">
+            <li class="hours-row">
+              <span class="hours-day">Lunes</span>
+              <span class="hours-closed">Cerrado</span>
+            </li>
+            <li class="hours-row">
+              <span class="hours-day">Martes</span>
+              <span class="hours-time">12:00 – 23:30</span>
+            </li>
+            <li class="hours-row">
+              <span class="hours-day">Miércoles</span>
+              <span class="hours-time">12:00 – 23:30</span>
+            </li>
+            <li class="hours-row">
+              <span class="hours-day">Jueves</span>
+              <span class="hours-time">12:00 – 23:30</span>
+            </li>
+            <li class="hours-row">
+              <span class="hours-day">Viernes</span>
+              <span class="hours-time">12:00 – 01:00</span>
+            </li>
+            <li class="hours-row">
+              <span class="hours-day">Sábado</span>
+              <span class="hours-time">12:00 – 01:00</span>
+            </li>
+            <li class="hours-row">
+              <span class="hours-day">Domingo</span>
+              <span class="hours-time">12:00 – 23:30</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class="fade-up fade-up-delay-1">
+          <h3>Contacto</h3>
+          <ul class="contact-list">
+            <li class="contact-item">
+              <div class="contact-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">Dirección</span>
+                <span class="contact-item-value">
+                  C.C. Miramadrid, Avda. Juan Pablo II nº 26<br/>
+                  Paracuellos de Jarama, 28860 Madrid
+                </span>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.03 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">Teléfono y WhatsApp</span>
+                <span class="contact-item-value">
+                  <a href="tel:653246613">653 246 613</a>
+                </span>
+              </div>
+            </li>
+            <li class="contact-item">
+              <div class="contact-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="contact-item-text">
+                <span class="contact-item-label">Email</span>
+                <span class="contact-item-value">
+                  <a href="mailto:contacto@labellotadeoro.es">contacto@labellotadeoro.es</a>
+                </span>
+              </div>
+            </li>
+          </ul>
+          <div class="social-row">
+            <a href="https://www.facebook.com/pages/La-Bellota-de-Oro/475766082521817" target="_blank" class="social-btn" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="https://wa.me/34653246613" target="_blank" class="social-btn" aria-label="WhatsApp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.118 1.524 5.854L.057 23.03a1 1 0 001.24 1.24l5.176-1.467A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.955 0-3.793-.538-5.371-1.476l-.385-.228-3.994 1.132 1.133-3.994-.228-.385A9.958 9.958 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mapa -->
+        <div class="fade-up fade-up-delay-2">
+          <h3>Cómo llegar</h3>
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.8!2d-3.5238!3d40.5075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCentro+Comercial+Miramadrid%2C+Avenida+Juan+Pablo+II+26%2C+Paracuellos+de+Jarama!5e0!3m2!1ses!2ses!4v1"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa La Bellota de Oro"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEWSLETTER ===== -->
+  <section id="newsletter">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div class="newsletter-text">
+          <h3>No te pierdas nuestras novedades</h3>
+          <p>Promociones, eventos y platos de temporada. Sin spam, sin rodeos.</p>
+        </div>
+        <form
+          action="http://labellotadeoro.us7.list-manage.com/subscribe/post?u=25287b43387c614d60d39bd94&id=e4ff0442fd"
+          method="post"
+          target="_blank"
+          class="newsletter-form"
+        >
+          <input
+            type="email"
+            name="EMAIL"
+            class="newsletter-input"
+            placeholder="tu@email.com"
+            required
+            aria-label="Tu email"
+          />
+          <button type="submit" class="newsletter-submit">Suscribirme</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" class="footer-logo">
+          <img src="la-bellota-de-oro_logo_contor-300x212.png" alt="La Bellota de Oro" />
+        </a>
+        <ul class="footer-links">
+          <li><a href="http://www.labellotadeoro.es/avisos-legales/" target="_blank">Avisos Legales</a></li>
+          <li><a href="http://www.labellotadeoro.es/politica-de-cookies/" target="_blank">Política de Cookies</a></li>
+          <li><a href="http://www.labellotadeoro.es/politica-de-privacidad/" target="_blank">Política de Privacidad</a></li>
+          <li><a href="mailto:contacto@labellotadeoro.es">contacto@labellotadeoro.es</a></li>
+        </ul>
+      </div>
+      <p class="footer-copy">© 2025 La Bellota de Oro · C.C. Miramadrid, Paracuellos de Jarama · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING ACTIONS (móvil) ===== -->
+  <div class="float-actions">
+    <a href="tel:653246613" class="btn btn-dark">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.03 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+      Llamar
+    </a>
+    <a href="https://wa.me/34653246613?text=Hola,%20quisiera%20hacer%20una%20reserva" target="_blank" class="btn btn-whatsapp">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.553 4.118 1.524 5.854L.057 23.03a1 1 0 001.24 1.24l5.176-1.467A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.955 0-3.793-.538-5.371-1.476l-.385-.228-3.994 1.132 1.133-3.994-.228-.385A9.958 9.958 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+      Reservar
+    </a>
+  </div>
+
+  <!-- ===== JS ===== -->
+  <script>
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // Hero video: hold on last frame when finished
+    const heroVideo = document.getElementById('hero-video');
+    if (heroVideo) {
+      heroVideo.addEventListener('ended', () => {
+        heroVideo.pause();
+      });
+    }
+
+    // Mobile nav
+    const toggle = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      toggle.classList.toggle('open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', false);
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Scroll fade-up animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', e => {
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Carta tabs navigation
+    const tabs = document.querySelectorAll('.carta-tab');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const target = document.getElementById(tab.dataset.target);
+        if (target) {
+          const offset = 140;
+          const top = target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+        // scroll tab into view
+        tab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      });
+    });
+
+    // Update active tab on scroll
+    const menuSections = document.querySelectorAll('.carta-menu-section[id]');
+    const cartaTabsBar = document.querySelector('.carta-tabs');
+    if (menuSections.length && cartaTabsBar) {
+      const tabObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            tabs.forEach(t => {
+              t.classList.toggle('active', t.dataset.target === id);
+              if (t.dataset.target === id) {
+                t.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+              }
+            });
+          }
+        });
+      }, { rootMargin: '-30% 0px -60% 0px' });
+      menuSections.forEach(s => tabObserver.observe(s));
+    }
+  </script>
+
+</body>
+</html>

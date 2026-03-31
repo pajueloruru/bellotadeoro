@@ -1,0 +1,166 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic:
+      - heading "La Bellota de Oro" [level=1] [ref=e4]:
+        - link "La Bellota de Oro" [ref=e5] [cursor=pointer]:
+          - /url: http://www.labellotadeoro.es/
+          - img "La Bellota de Oro" [ref=e6]
+      - navigation [ref=e7]:
+        - generic:
+          - list:
+            - listitem [ref=e8]:
+              - link "Inicio" [ref=e9] [cursor=pointer]:
+                - /url: http://www.labellotadeoro.es/
+            - listitem [ref=e11]:
+              - link "Nuestra carta" [ref=e12] [cursor=pointer]:
+                - /url: http://www.labellotadeoro.es/nuestra-carta/
+            - listitem [ref=e13]:
+              - link "BLOG" [ref=e14] [cursor=pointer]:
+                - /url: http://www.labellotadeoro.es/blog/
+            - listitem [ref=e15]:
+              - link "Celebraciones" [ref=e16] [cursor=pointer]:
+                - /url: http://www.labellotadeoro.es/celebraciones/
+            - listitem [ref=e17]:
+              - link "Contacto" [ref=e18] [cursor=pointer]:
+                - /url: http://www.labellotadeoro.es/contacto/
+  - generic [ref=e21]:
+    - list [ref=e22]:
+      - listitem [ref=e23]
+    - list [ref=e24]:
+      - listitem [ref=e25]:
+        - generic [ref=e26]: "1"
+      - listitem [ref=e27]:
+        - generic [ref=e28] [cursor=pointer]: "2"
+      - listitem [ref=e29]:
+        - generic [ref=e30] [cursor=pointer]: "3"
+      - listitem [ref=e31]:
+        - generic [ref=e32] [cursor=pointer]: "4"
+      - listitem [ref=e33]:
+        - generic [ref=e34] [cursor=pointer]: "5"
+      - listitem [ref=e35]:
+        - generic [ref=e36] [cursor=pointer]: "6"
+      - listitem [ref=e37]:
+        - generic [ref=e38] [cursor=pointer]: "7"
+      - listitem [ref=e39]:
+        - generic [ref=e40] [cursor=pointer]: "8"
+      - listitem [ref=e41]:
+        - generic [ref=e42] [cursor=pointer]: "9"
+    - list:
+      - listitem
+      - listitem
+  - generic [ref=e44]:
+    - generic [ref=e45]:
+      - generic [ref=e46]:
+        - heading "Bienvenido a 'La Bellota de Oro'" [level=3] [ref=e47]:
+          - link "Bienvenido a 'La Bellota de Oro'" [ref=e48] [cursor=pointer]:
+            - /url: http://www.labellotadeoro.es/
+        - img "Bienvenido a La Bellota de Oro" [ref=e49]
+        - paragraph [ref=e50]: La Bellota de oro es conocida por sus productos de primera calidad, su bullicioso ambiente y por su gran variedad en raciones elaboradas con los mejores ingredientes. Disfruta de nuestras magnificas tapas mientras disfrutas de una caña o uno de nuestros vinos.
+      - generic [ref=e51]:
+        - heading "Hacer reserva" [level=3] [ref=e52]:
+          - link "Hacer reserva" [ref=e53] [cursor=pointer]:
+            - /url: http://www.labellotadeoro.es/contacto/
+        - img "Haz una reserva" [ref=e54]
+        - paragraph [ref=e55]:
+          - text: No esperes más y haz tu reserva desde nuestra web para evitar complicaciones.
+          - link "Hacer reserva." [ref=e56] [cursor=pointer]:
+            - /url: http://www.labellotadeoro.es/contacto/
+      - generic [ref=e57]:
+        - heading "Nuestra carta" [level=3] [ref=e58]:
+          - link "Nuestra carta" [ref=e59] [cursor=pointer]:
+            - /url: http://www.labellotadeoro.es/nuestra-carta/
+        - img "Nuestra carta" [ref=e60]
+        - paragraph [ref=e61]:
+          - text: ¿Estás aburrido de comer siempre lo mismo?
+          - link "Consulta nuestra carta" [ref=e62] [cursor=pointer]:
+            - /url: http://www.labellotadeoro.es/nuestra-carta/
+          - text: . Disponemos de un amplio menú de raciones, platos y especialidades que te dejarán con ganas de repetir.
+    - generic [ref=e67]:
+      - generic [ref=e68]:
+        - heading "Visítanos" [level=3] [ref=e69]
+        - heading "Centro Comercial Miramadrid" [level=6] [ref=e70]
+        - generic [ref=e71]:
+          - text: Avda. Juan Pablo II, nº 26
+          - text: Paracuellos de Jarama
+          - text: 28860 Madrid
+        - generic [ref=e72]: "Mobile: 653246613"
+        - generic [ref=e73]:
+          - text: "E-mail:"
+          - link "contacto@labellotadeoro.es" [ref=e74] [cursor=pointer]:
+            - /url: mailto:contacto@labellotadeoro.es
+        - link "F" [ref=e76] [cursor=pointer]:
+          - /url: https://www.facebook.com/pages/La-Bellota-de-Oro/475766082521817
+      - generic [ref=e77]:
+        - heading "Nuestro horario" [level=3] [ref=e78]
+        - list [ref=e79]:
+          - listitem [ref=e80]:
+            - heading "Lunes" [level=6] [ref=e82]
+            - generic [ref=e83]: Cerrado
+          - listitem [ref=e85]:
+            - heading "Martes" [level=6] [ref=e87]
+            - generic [ref=e88]: 12:00 a 23:30
+          - listitem [ref=e90]:
+            - heading "Miércoles" [level=6] [ref=e92]
+            - generic [ref=e93]: 12:00 a 23:30
+          - listitem [ref=e95]:
+            - heading "Jueves" [level=6] [ref=e97]
+            - generic [ref=e98]: 12:00 a 23:30
+          - listitem [ref=e100]:
+            - heading "Viernes" [level=6] [ref=e102]
+            - generic [ref=e103]: 12:00 a 01:00
+          - listitem [ref=e105]:
+            - heading "Sábado" [level=6] [ref=e107]
+            - generic [ref=e108]: 12:00 a 01:00
+          - listitem [ref=e110]:
+            - heading "Domingo" [level=6] [ref=e112]
+            - generic [ref=e113]: 12:00 a 23:30
+      - generic [ref=e115]:
+        - heading "No te pierdas nuestras promociones" [level=3] [ref=e116]
+        - generic [ref=e119]:
+          - generic [ref=e120] [cursor=pointer]: En todo momento tienes derecho de acceso, rectificación, cancelación y oposición de tus datos escribiéndonos simplemente a contacto@labellotadeoro.es con el asunto RGPD e indicándonos qué es exactamente lo que deseas que hagamos. ¡Así de fácil!
+          - textbox "En todo momento tienes derecho de acceso, rectificación, cancelación y oposición de tus datos escribiéndonos simplemente a contacto@labellotadeoro.es con el asunto RGPD e indicándonos qué es exactamente lo que deseas que hagamos. ¡Así de fácil!" [ref=e121]:
+            - /placeholder: dirección de email
+          - button "Enviar" [ref=e123] [cursor=pointer]
+      - generic [ref=e124]:
+        - heading "Más información" [level=3] [ref=e125]
+        - list [ref=e126]:
+          - listitem [ref=e127]:
+            - link "Avisos Legales" [ref=e128] [cursor=pointer]:
+              - /url: http://www.labellotadeoro.es/avisos-legales/
+          - listitem [ref=e129]:
+            - link "Política de Cookies" [ref=e130] [cursor=pointer]:
+              - /url: http://www.labellotadeoro.es/politica-de-cookies/
+          - listitem [ref=e131]:
+            - link "Política de Privacidad" [ref=e132] [cursor=pointer]:
+              - /url: http://www.labellotadeoro.es/politica-de-privacidad/
+  - contentinfo [ref=e134]:
+    - generic [ref=e136]:
+      - link "La Bellota de Oro" [ref=e138] [cursor=pointer]:
+        - /url: http://www.labellotadeoro.es
+        - img "La Bellota de Oro" [ref=e139]
+      - list [ref=e141]:
+        - listitem [ref=e142]:
+          - link "Inicio" [ref=e143] [cursor=pointer]:
+            - /url: http://www.labellotadeoro.es/
+        - listitem [ref=e144]:
+          - link "Nuestra carta" [ref=e145] [cursor=pointer]:
+            - /url: http://www.labellotadeoro.es/nuestra-carta/
+        - listitem [ref=e146]:
+          - link "BLOG" [ref=e147] [cursor=pointer]:
+            - /url: http://www.labellotadeoro.es/blog/
+        - listitem [ref=e148]:
+          - link "Celebraciones" [ref=e149] [cursor=pointer]:
+            - /url: http://www.labellotadeoro.es/celebraciones/
+        - listitem [ref=e150]:
+          - link "Contacto" [ref=e151] [cursor=pointer]:
+            - /url: http://www.labellotadeoro.es/contacto/
+  - generic [ref=e155] [cursor=pointer]:
+    - img
+  - generic [ref=e157]:
+    - generic [ref=e158]:
+      - text: "Esta página utiliza cookies y otras tecnologías para que podamos mejorar su experiencia en nuestros sitios:"
+      - link "Más información." [ref=e159] [cursor=pointer]:
+        - /url: http://www.labellotadeoro.es/politica-de-cookies/
+    - generic [ref=e160]:
+      - button "Aceptar" [ref=e161] [cursor=pointer]
+      - button "Rechazar" [ref=e162] [cursor=pointer]
