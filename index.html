@@ -203,6 +203,13 @@
     .nav-toggle.open span:nth-child(2) { opacity: 0; }
     .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
+    /* Fix: ocultar fondo del header cuando el menú móvil está abierto */
+    #header.menu-open {
+      background: transparent !important;
+      backdrop-filter: none !important;
+      box-shadow: none !important;
+    }
+
     /* ===== HERO ===== */
     #hero {
       position: relative;
@@ -697,6 +704,29 @@
 
     .carta-encargo svg { flex-shrink: 0; margin-top: 1px; color: var(--gold); }
 
+    /* Fotos dentro de la carta */
+    .carta-food-photo {
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin: 0.5rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .carta-food-photo img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .carta-food-photo:hover img { transform: scale(1.03); }
+    .carta-food-photo-caption {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      font-style: italic;
+      text-align: center;
+      padding: 6px 0 2px;
+    }
+
     /* ===== CELEBRACIONES ===== */
     #celebraciones {
       background: var(--cream);
@@ -754,8 +784,8 @@
     }
 
     .celebraciones-images {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: column;
       gap: 1rem;
     }
 
@@ -767,14 +797,35 @@
 
     .celebraciones-img img {
       width: 100%;
-      aspect-ratio: 3/4;
+      aspect-ratio: 4/3;
       object-fit: cover;
       transition: transform 0.6s ease;
+      display: block;
     }
 
     .celebraciones-img:hover img { transform: scale(1.04); }
 
-    .celebraciones-img:first-child { margin-top: 2.5rem; }
+    .celebraciones-vistas {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .celebraciones-vistas img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+    .celebraciones-vistas:hover img { transform: scale(1.03); }
+    .celebraciones-vistas-label {
+      background: var(--brown-deep);
+      color: rgba(255,255,255,0.75);
+      padding: 8px 14px;
+      font-size: 0.76rem;
+      font-style: italic;
+      letter-spacing: 0.02em;
+    }
 
     /* ===== RESERVA CTA ===== */
     #reserva-cta {
@@ -1072,6 +1123,81 @@
       text-align: center;
     }
 
+    /* ===== RESEÑAS ===== */
+    #resenas {
+      background: var(--white);
+      padding: 80px 0;
+    }
+    .resenas-header { text-align: center; margin-bottom: 3rem; }
+    .resenas-rating-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .resenas-score {
+      font-family: var(--font-serif);
+      font-size: 4.5rem;
+      font-weight: 700;
+      color: var(--brown-deep);
+      line-height: 1;
+    }
+    .resenas-score-detail { text-align: left; }
+    .resenas-stars {
+      display: flex;
+      gap: 5px;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .resenas-count {
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+    .resenas-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+      margin-top: 2.5rem;
+    }
+    .resena-card {
+      background: var(--cream);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.5rem;
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    .resena-card-stars {
+      display: flex;
+      gap: 3px;
+      color: var(--gold);
+    }
+    .resena-card-text {
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.65;
+      font-style: italic;
+      flex: 1;
+    }
+    .resena-card-author {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-light);
+      font-family: var(--font-sans);
+    }
+    .resenas-source {
+      text-align: center;
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+    .resenas-source a { color: var(--gold); text-decoration: underline; }
+    @media (max-width: 1024px) { .resenas-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 640px) { .resenas-grid { grid-template-columns: 1fr; } }
+
     /* ===== FLOATING ACTIONS (mobile) ===== */
     .float-actions {
       display: none;
@@ -1281,8 +1407,8 @@
       <div class="about-inner">
         <div class="about-image-wrap fade-up">
           <img
-            src="images/imagensn.jpg"
-            alt="Interior de La Bellota de Oro"
+            src="images/cortadorjamon.png"
+            alt="Cortador de jamón en La Bellota de Oro"
             class="about-image-main"
           />
           <div class="about-image-badge">
@@ -1532,6 +1658,12 @@
           </div>
         </div>
 
+        <!-- Foto cachopo -->
+        <div class="carta-food-photo fade-up">
+          <img src="images/cachopo.png" alt="Cachopo en La Bellota de Oro" loading="lazy" />
+          <p class="carta-food-photo-caption">Producto de calidad, elaborado en casa</p>
+        </div>
+
         <!-- DEL MAR -->
         <div class="carta-menu-section fade-up" id="mar">
           <div class="carta-section-header">
@@ -1711,6 +1843,12 @@
           </div>
         </div>
 
+        <!-- Foto postre -->
+        <div class="carta-food-photo fade-up">
+          <img src="images/postre.png" alt="Postre de La Bellota de Oro" loading="lazy" />
+          <p class="carta-food-photo-caption">Postres caseros, el broche perfecto</p>
+        </div>
+
         <!-- ARROCES Y ESPECIALES -->
         <div class="carta-menu-section fade-up" id="arroces">
           <div class="carta-section-header">
@@ -1769,6 +1907,7 @@
           <ul class="celebraciones-list">
             <li class="celebraciones-item">Menús cerrados para grupos desde 10 personas</li>
             <li class="celebraciones-item">Zona reservada para tu evento</li>
+            <li class="celebraciones-item">Terraza con vistas espectaculares sobre el pueblo</li>
             <li class="celebraciones-item">Adaptamos la carta a tus preferencias</li>
             <li class="celebraciones-item">Trato directo sin intermediarios</li>
             <li class="celebraciones-item">Presupuesto sin compromiso</li>
@@ -1785,16 +1924,19 @@
           <div class="celebraciones-images">
             <div class="celebraciones-img">
               <img
-                src="images/celebraciones1.jpg"
+                src="images/bellotamesas.png"
                 alt="Celebraciones en La Bellota de Oro"
+                loading="lazy"
               />
             </div>
-            <div class="celebraciones-img">
-              <img
-                src="images/celebraciones2.jpg"
-                alt="Ambiente en La Bellota de Oro"
-              />
-            </div>
+          </div>
+          <div class="celebraciones-vistas" style="margin-top: 1rem;">
+            <img
+              src="images/vistas.jpeg"
+              alt="Vistas desde la terraza de La Bellota de Oro"
+              loading="lazy"
+            />
+            <p class="celebraciones-vistas-label">Terraza con vistas espectaculares sobre Paracuellos</p>
           </div>
         </div>
       </div>
@@ -1820,6 +1962,65 @@
           </a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== RESEÑAS ===== -->
+  <section id="resenas">
+    <div class="container">
+      <div class="resenas-header fade-up">
+        <p class="section-label">Lo que dice la gente</p>
+        <h2 class="section-title">Más de 1.000 opiniones.<br/>4 estrellas en Google.</h2>
+        <div class="resenas-rating-block" style="margin-top:1.5rem;">
+          <span class="resenas-score">4,0</span>
+          <div class="resenas-score-detail">
+            <div class="resenas-stars">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            </div>
+            <p class="resenas-count">Basado en 1.002 reseñas en Google</p>
+          </div>
+        </div>
+      </div>
+      <div class="resenas-grid">
+        <div class="resena-card fade-up">
+          <div class="resena-card-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="resena-card-text">"Un sitio de referencia en Paracuellos. Los ibéricos son de primera y el trato es genial. Llevamos años viniendo y nunca defrauda."</p>
+          <span class="resena-card-author">María G. · Paracuellos de Jarama</span>
+        </div>
+        <div class="resena-card fade-up fade-up-delay-1">
+          <div class="resena-card-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="resena-card-text">"Fuimos a celebrar un cumpleaños y todo perfecto. Nos reservaron una zona tranquila, la comida estaba buenísima y el servicio muy atento."</p>
+          <span class="resena-card-author">Carlos M. · Madrid</span>
+        </div>
+        <div class="resena-card fade-up fade-up-delay-2">
+          <div class="resena-card-stars">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="resena-card-text">"El jamón ibérico está de muerte. Lo mejor del C.C. Miramadrid sin ninguna duda. Ambiente animado y muy buen precio para lo que te ponen."</p>
+          <span class="resena-card-author">Laura P. · San Fernando de Henares</span>
+        </div>
+      </div>
+      <p class="resenas-source fade-up">Opiniones reales de <a href="https://maps.google.com" target="_blank" rel="noopener">Google Maps</a> · 1.002 valoraciones</p>
     </div>
   </section>
 
@@ -1994,11 +2195,54 @@
       header.classList.toggle('scrolled', window.scrollY > 60);
     }, { passive: true });
 
-    // Hero video: hold on last frame when finished
+    // Hero video: ping-pong (adelante → atrás → adelante...) mientras el hero es visible
     const heroVideo = document.getElementById('hero-video');
     if (heroVideo) {
+      let isReversing = false;
+      let rafId = null;
+      let lastTimestamp = null;
+      let heroVisible = true;
+
+      const heroSection = document.getElementById('hero');
+      const heroVisibilityObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          heroVisible = entry.isIntersecting;
+          if (!heroVisible) {
+            if (rafId) { cancelAnimationFrame(rafId); rafId = null; }
+            heroVideo.pause();
+          } else {
+            if (!isReversing) {
+              heroVideo.play();
+            } else {
+              lastTimestamp = null;
+              rafId = requestAnimationFrame(stepReverse);
+            }
+          }
+        });
+      }, { threshold: 0.1 });
+      heroVisibilityObserver.observe(heroSection);
+
+      function stepReverse(timestamp) {
+        if (!heroVisible) { rafId = null; return; }
+        if (lastTimestamp !== null) {
+          const delta = (timestamp - lastTimestamp) / 1000;
+          heroVideo.currentTime = Math.max(0, heroVideo.currentTime - delta);
+        }
+        lastTimestamp = timestamp;
+        if (heroVideo.currentTime <= 0.05) {
+          lastTimestamp = null;
+          isReversing = false;
+          heroVideo.play();
+          return;
+        }
+        rafId = requestAnimationFrame(stepReverse);
+      }
+
       heroVideo.addEventListener('ended', () => {
+        isReversing = true;
         heroVideo.pause();
+        lastTimestamp = null;
+        rafId = requestAnimationFrame(stepReverse);
       });
     }
 
@@ -2009,6 +2253,7 @@
       const isOpen = navLinks.classList.toggle('open');
       toggle.classList.toggle('open', isOpen);
       toggle.setAttribute('aria-expanded', isOpen);
+      header.classList.toggle('menu-open', isOpen);
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
 
@@ -2017,6 +2262,7 @@
         navLinks.classList.remove('open');
         toggle.classList.remove('open');
         toggle.setAttribute('aria-expanded', false);
+        header.classList.remove('menu-open');
         document.body.style.overflow = '';
       });
     });
